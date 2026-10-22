@@ -110,5 +110,7 @@ $categories = $conn->query("SELECT id, name FROM categories ORDER BY name");
 
         <button type="submit">Add Product</button>
     </form>
+
+    <p><a href="index.php">Back to Products</a></p>
 </body>
 </html>
