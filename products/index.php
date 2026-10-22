@@ -44,10 +44,18 @@ $result = $conn->query($sql);
                         <td>
                             <a href="edit.php?id=<?php echo $product["id"]; ?>">Edit</a>
                             |
-                            <a href="delete.php?id=<?php echo $product["id"]; ?>"
-                             onclick="return confirm('Are you sure you want to delete this product?');">
-                             Delete
-                            </a>
+                            <form
+                              action="delete.php"
+                              method="POST"
+                              style="display:inline;"
+                              onsubmit="return confirm('Are you sure you want to delete this product?');"
+                            >
+
+                            <input type="hidden" name="id" value=" <?php echo (int) $product["id"]; ?> ">
+
+                            <button type="submit">Delete</button>
+
+                            </form>
                         </td>
                     </tr>
 
