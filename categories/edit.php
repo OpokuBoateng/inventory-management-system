@@ -76,8 +76,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Edit Category</title>
 
     <h1>Edit Category</h1>
-
-    <?php if ($error != ""): ?>
+ </head>
+ <body>
+     <?php if ($error != ""): ?>
       <p style="color:red";>
           <?php echo htmlspecialchars($error, ENT_QUOTES, "UTF-8");  ?>
       </p>
@@ -94,8 +95,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </form>
 
     <p><a href="index.php">Back to Category</a></p>
- </head>
- <body>
-
  </body>
  </html>
