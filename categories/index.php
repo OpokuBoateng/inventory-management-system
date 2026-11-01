@@ -39,6 +39,19 @@ $result = $conn->query($sql);
 
                     <td>
                         <a href="edit.php?id=<?php echo (int) $category["id"]; ?>">Edit</a>
+
+                        <form action="delete.php" method="POST" style="display: inline;"
+                            onsubmit="return confirm('Are you sure you want to delete this category?');">
+
+                            <input
+                                 type="hidden"
+                                 name="id"
+                                 value="<?php echo (int) $category["id"]; ?>"
+                            >
+
+                            <button type="submit">Delete</button>
+
+                        </form>
                     </td>
                 </tr>
 
